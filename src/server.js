@@ -9,4 +9,6 @@ function createCharge(amount) {
   return { id: 'ch_' + Date.now(), amount, currency: config.currency };
 }
 
-module.exports = { health, createCharge };
+const { createRefund } = require('./refunds');
+
+module.exports = { health, createCharge, createRefund };
